@@ -1,8 +1,8 @@
 {
-  "name": "Geez Music",
+  "name": "UserLazy Music",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/vckyou/Geez-MusicProject",
+  "repository": "https://github.com/UserLazy/UserLazy-MusicVCG",
   "stack": "container",
   "buildpacks": [
    {
@@ -30,24 +30,24 @@
     "SUPPORT_GROUP": {
       "description": "Grup dukungan MusicPlayer Anda Tanpa Menggunakan ==> @ <== [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "GeezSupportGroup"
+      "value": "ZonaGreenland"
     },
     "UPDATES_CHANNEL": {
       "description": "Updates Channel @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "GeezProjects"
+      "value": "UserLazyXBot"
     }, 
     "PROJECT_NAME": {
       "description": "Nama proyek MusicPlayer Anda.",
       "required": false,
-      "value": "Geez Projects"
+      "value": "UserLazy Projects"
     },
     "ASSISTANT_NAME": {
       "description": "Username Telegram asisten Music Player Anda tanpa @.",
       "required": true
     },
     "OWNER": {
-      "description": "Masukan Nama atau Username Telegram",
+      "description": "Masukan Username Telegram",
       "required": true
     },
     "ARQ_API_KEY": {
@@ -57,14 +57,14 @@
     "BG_IMAGE": {
       "description": "Custom Background Play Musik Gunakan Foto yang Transparant format .png / .jpg",
       "required": false,
-      "value": "https://telegra.ph/file/7de6a24af6cfc049a9316.png"
+      "value": "https://telegra.ph/file/e7d7e0dcf71ee790da592.jpg"
     },        
     "API_ID": {
-      "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps atau t.me/scrapmanbot",
+      "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps",
       "required": true
     },   
     "API_HASH": {
-      "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps atau t.me/scrapmanbot",
+      "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps",
       "required": true
     },
     "PMPERMIT": {
@@ -79,7 +79,7 @@
     "DURATION_LIMIT": {
       "description": "Batas durasi audio maksimal untuk download (minutes).",
       "required": true,
-      "value": "15"
+      "value": "60"
     }
   }
 }
