@@ -51,12 +51,12 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "💬 Channel Updates", url=f"https://t.me/userlazyxbot"), 
+                        "💬 Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "🎈 Group Support", url=f"https://t.me/odasupport")
+                        "🎈 Group Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "Zona Greenland", url=f"https://t.me/zonagreenland")
+                        "Zona Greenland", url=f"https://{SOURCE_CODE}")
                 ],[
                     InlineKeyboardButton(
                         "🎁 Donate", url=f"https://t.me/RxyMX")
@@ -79,7 +79,6 @@ def _help(client, message):
 
 help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help+'))
 
-
 @Client.on_callback_query(help_callback_filter)
 def help_answer(client, callback_query):
     chat_id = callback_query.from_user.id
@@ -97,12 +96,12 @@ def map(pos):
             [InlineKeyboardButton(text = 'Next »', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
-        url = f"https://t.me/odasupport"
+        url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [InlineKeyboardButton("➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '💬 Channel Updates', url=f"https://t.me/userlazyxbot"),
-             InlineKeyboardButton(text = '🔰 Group Support', url=f"https://t.me/odasupport")],
-            [InlineKeyboardButton(text = 'Zona Greenland', url=f"https://zonagreenland")],
+            [InlineKeyboardButton(text = '💬 Channel Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
+             InlineKeyboardButton(text = '🔰 Group Support', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = 'Zona Greenland', url=f"https://{SOURCE_CODE}")],
             [InlineKeyboardButton(text = '«', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -172,7 +171,7 @@ async def reload(client: Client, message: Message):
                         "Group Support", url=f"https://t.me/odasupport"
                     ),
                     InlineKeyboardButton(
-                        "Created By", url=f"https://t.me/RxyMX"
+                        "Created By", url=f"https://t.me/rxymx"
                     )
                 ]
             ]
